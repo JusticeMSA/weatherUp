@@ -1,0 +1,337 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #111630;
+  font-family: openSansRegular, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100vw;
+  padding: 0 10%;
+  margin-bottom: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #111630;
+}
+
+header .container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .logo img {
+  width: 160px;
+}
+
+header .container form {
+  width: 70%;
+  min-width: 220px;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+header .container form input {
+  width: 100%;
+  height: 25px;
+  background-color: transparent;
+  border: solid 1px #fff;
+  border-radius: 8px;
+  padding: 0 5px;
+  color: #ffff;
+  font-size: 15px;
+  caret-color: #EDE720;
+  font-family: openSansRegular, sans-serif;
+}
+
+header .container form input ::-webkit-input-placeholder {
+  padding: 0 5px;
+  color: #eeeeee;
+}
+
+header .container form input :-ms-input-placeholder {
+  padding: 0 5px;
+  color: #eeeeee;
+}
+
+header .container form input ::-ms-input-placeholder {
+  padding: 0 5px;
+  color: #eeeeee;
+}
+
+header .container form input ::placeholder {
+  padding: 0 5px;
+  color: #eeeeee;
+}
+
+header .container form input:focus {
+  outline: none;
+  border-color: #EDE720;
+}
+
+header .container p {
+  color: #fff;
+  opacity: 0.5;
+}
+
+header.minimized {
+  display: block;
+  position: relative;
+}
+
+header.minimized .container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px;
+}
+
+header.minimized form {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  header.minimized {
+    height: 70px;
+  }
+  header.minimized .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header.minimized .container br {
+    display: none;
+  }
+  header.minimized .container form {
+    padding: 0;
+    margin-right: 0;
+    width: 250px;
+  }
+}
+
+.main {
+  color: #fff;
+}
+
+.main .city {
+  text-align: center;
+}
+
+.main .city h2 {
+  font-size: 25px;
+}
+
+.main .city .date-time {
+  font-size: 14px;
+}
+
+.main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 25px;
+  padding: 0 10%;
+}
+
+.main .container .weather {
+  font-size: 70px;
+  font-weight: bolder;
+}
+
+.main .container .icon {
+  width: 150px;
+}
+
+.main .container .extras {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .container .extras .extra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.main .container .extras .extra img {
+  width: 25px;
+  margin-right: 5px;
+}
+
+.main .container .extras .extra p {
+  font-size: 14px;
+}
+
+.main .container .weather, .main .container .icon, .main .container .extras {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .main .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 100px;
+  }
+  .main .container .weather {
+    font-size: 100px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main .container {
+    margin: 100px 5% 0 5%;
+  }
+  .main .container .weather {
+    font-size: 120px;
+  }
+}
+
+.upcoming {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.upcoming .day-1, .upcoming .day-2, .upcoming .day-3, .upcoming .day-4, .upcoming .day-5 {
+  text-align: center;
+  color: #fff;
+  width: 80%;
+  height: 160px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.upcoming .day-1 .icon, .upcoming .day-2 .icon, .upcoming .day-3 .icon, .upcoming .day-4 .icon, .upcoming .day-5 .icon {
+  background-color: #7C7C7C;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.upcoming .day-1 .icon img, .upcoming .day-2 .icon img, .upcoming .day-3 .icon img, .upcoming .day-4 .icon img, .upcoming .day-5 .icon img {
+  width: 40px;
+}
+
+.upcoming .day-1 .weather, .upcoming .day-2 .weather, .upcoming .day-3 .weather, .upcoming .day-4 .weather, .upcoming .day-5 .weather {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.upcoming .day-1, .upcoming .day-4 {
+  border-top: solid 8px #EDE720;
+  background-color: rgba(237, 255, 32, 0.17);
+}
+
+.upcoming .day-2, .upcoming .day-5 {
+  border-top: solid 8px #05BFDD;
+  background-color: rgba(4, 152, 186, 0.17);
+}
+
+.upcoming .day-3 {
+  border-top: solid 8px #fff;
+  background-color: rgba(255, 255, 255, 0.17);
+}
+
+@media screen and (min-width: 768px) {
+  .upcoming {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 100px;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 30px;
+  padding: 0 10%;
+  color: #ffff;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+@font-face {
+  font-family: openSansRegular;
+  src: url("../pre-fonts/OpenSans-Regular.ttf");
+}
+/*# sourceMappingURL=style.css.map */
